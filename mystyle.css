@@ -1,0 +1,347 @@
+body {
+    background-color: rgba(243, 243, 226, 1);
+    width: 320px;
+    height: 100%;
+}
+/* //////////// NAV ////////////// */
+nav {
+    height: 50px;
+    background-color: rgba(58, 53, 53, 1);
+    border-bottom: 2px solid gray;
+}
+
+ul {
+    float: right;
+    height: 40px;
+    line-height: 40px;
+    background-color: rgba(230, 127, 54, 1);
+    margin: 5px;
+    -webkit-padding-start: 0px;
+    border-radius: 5px;
+}
+
+
+li {
+    color: #fff;
+    font-family: 'Pacifico', cursive;
+    font-size: 18px;
+    display: inline-block;
+    list-style: none;
+    width: 100px;
+    text-align: center;
+    transition: width 1s;
+}
+
+li:hover {
+    font-size: 24px;
+    color: rgb(58, 53, 53);
+    width: 150px;
+}
+
+/* //////////// IMG BLOCK ////////////// */
+
+#img-block{
+    width: 100%;
+    height: 150px;
+}
+
+#blockPhotos {
+    width: 100%;
+    height: 100%;
+}
+
+/* //////////// SELECTION ////////////// */
+
+#search-form {
+    height: 241px;
+    width: 100%;
+}
+
+.search-title {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    background-color: aqua;
+    height: 50px;
+    width: 100%;
+    line-height: 50px;
+}
+
+select {
+    display: block;
+    margin: 35px auto;
+    border: 2px solid black;
+    width: 200px;
+    height: 35px;
+    outline: 0;
+}
+
+.choice {
+    display: inline-block;
+    width: 100%;
+    height: 100px;
+}
+
+.choice.city {
+    background-color: rgb(138, 43, 226);
+}
+
+.choice.cuisine {
+    background-color: rgb(149, 236, 138);
+}
+
+select:disabled {
+    color: rgb(142, 142, 142);
+    border: 2px solid rgb(142, 142, 142);
+}
+
+
+/* //////////// SEARCH BUTTON ////////////// */
+.search-btn {
+    width: 100%;
+    background-color: rgb(241, 138, 6);
+    height: 66px;
+}
+
+.go:disabled {
+    background-color: rgb(142, 142, 142);
+    color: rgba(253, 251, 251, 0.66);
+}
+
+.go, .search-again {
+    width: 85px;
+    height: 40px;
+    border-radius: 5px;
+    margin: 15px 0 15px 15px;
+    background-color: rgb(70, 189, 93);
+    border: none;
+    outline: 0;
+    position: absolute;
+    color: #fff;
+}
+
+.go:hover, .search-again:hover {
+    box-shadow: inset 2px 2px 2px rgba(106, 113, 107, 1), 3px 3px 2px rgb(104, 116, 106);
+}
+
+.go.hide {
+    visibility: hidden;
+}
+
+.search-again.hide {
+    visibility: hidden;
+}
+
+.search-again.show {
+    visibility: visible;
+}
+
+
+
+/* //////////// RESULT BLOCK ////////////// */
+
+#result-block {
+    margin-top: 75px;
+}
+
+#result-block.show {
+    margin-top: 90px;
+    height: 330px;
+}
+
+#result-block .hide {
+    display: none;
+}
+
+#result-block.show img {
+    display: block;
+    margin: 0 auto;
+    width: 320px;
+    height: 150px;
+}
+
+a {
+    color: inherit;
+    cursor: pointer;
+}
+
+.total {
+    width: 200px;
+    margin: 25px 5px;
+    display: inline-block;
+    font-size: 15px;
+    color: rgb(74, 72, 72);
+}
+
+.total.noResult {
+    margin-top: 13px;
+}
+
+.result-info.show{
+    height: 130px;
+}
+.yelp, .phone, .address {
+    display: inline-block;
+    width: 275px;
+    padding: 5px 0;
+    font-size: 13px;
+}
+
+.fa-map-marker {
+    color: rgb(224, 90, 80);
+}
+
+.fa {
+    margin: 0 15px 0 15px;
+}
+
+.fa-yelp {
+    color: rgb(175, 6, 6);
+}
+
+.phoneNo {
+    text-decoration: none;
+}
+
+.dish {
+    color: rgb(36, 186, 232);
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+}
+
+.blinker {
+    -webkit-animation-name: blinker;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+
+    -moz-animation-name: blinker;
+    -moz-animation-duration: 2s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+
+    animation-name: blinker;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@-moz-keyframes blinker {
+    0% { opacity: 1.0;}
+    50% { opacity: 0}
+    100% { opacity: 1.0;}
+}
+
+@-webkit-keyframes blinker {
+    0% { opacity: 1.0; }
+    50% { opacity: 0; }
+    100% { opacity: 1.0;}
+}
+
+@keyframes blinker {
+    0% { opacity: 1.0; }
+    50% { opacity: 0; }
+    100% { opacity: 1.0;}
+}
+
+/* //////////// POPUP ////////////// */
+#popupOne{
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 320px;
+    height: 100%;
+    background-color: rgba(0,0,0,0.75);
+    display: none;
+    z-index: 1;
+}
+
+.popupBoxWrapper{
+    width: 330px;
+    margin: 50px -6px;
+    text-align: left;
+}
+.popupBoxContent{
+    background-color: #fff;
+    padding: 5px;
+    width: 315px;
+}
+
+.popup-submit {
+    display: block;
+    margin: 10px auto;
+    width: 260px;
+    height: 25px;
+    outline: 0;
+}
+
+.btns {
+    margin-left: 130px;
+}
+
+.popup-btn {
+    color: #fff;
+    font-family: 'Pacifico', cursive;
+    border-radius: 5px;
+    outline: 0;
+    background-color: rgb(43, 156, 6);
+    border: none;
+    padding: 10px;
+    margin: 5px 10px;
+}
+
+.popup-btn a {
+    text-decoration: none;
+}
+
+.popup-btn:hover, .popup-btn:active {
+    box-shadow: 2px 2px 2px black;
+}
+
+.cxl:hover {
+    background-color: rgb(175, 175, 175);
+}
+
+input[type=text] {
+    border-radius: 5px;
+    border: 2px solid rgb(74, 72, 72);
+    text-align: left;
+    padding: 5px;
+}
+
+/* //////////// MAP ////////////// */
+
+.map.hide {
+    visibility: hidden;
+}
+
+.map {
+    margin: 10px auto;
+    width: 175px;
+    height: 175px
+}
+
+/* //////////// FOOTER ////////////// */
+
+footer {
+    background-color: rgb(58, 53, 53);
+    height: 50px;
+    color: rgb(232, 229, 229);
+    line-height: 50px;
+    margin-top: 56px;
+}
+
+footer.show {
+    margin-top: 225px;
+}
+
+/* //////////// MISC ////////////// */
+
+select, .search-title, #search-result, .dish, .popup-title, .popup-submit, .total, footer{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+span {
+    font-family: 'Montserrat', sans-serif;
+}
